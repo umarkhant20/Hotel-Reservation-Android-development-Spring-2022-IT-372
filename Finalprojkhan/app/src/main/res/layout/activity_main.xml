@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Umar Khan
+    IT-372
+    Final Project -->
+
+  <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+  >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      tools:context=".ui.activities.MainActivity">
+
+      <!--it displays reserve button-->
+      <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="40dp"
+        android:onClick="reserveInformation"
+        android:text="Reserve"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+      <!--it displays reset button-->
+      <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="230dp"
+        android:onClick="resetInformation"
+        android:text="@string/reset_caption"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+      <!--it displays checkbox-->
+      <CheckBox
+        android:id="@+id/chk_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="40dp"
+        android:text="Check if you are a golden member."
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spn_guests" />
+
+      <!--it displays first name text field-->
+      <EditText
+        android:id="@+id/first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/black"
+        android:ems="10"
+        android:hint="@string/first_name"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+      <!--it displays last name text field-->
+      <EditText
+        android:id="@+id/last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/black"
+        android:ems="10"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/first_name" />
+
+      <!--it displays age text field-->
+      <EditText
+        android:id="@+id/edt_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/black"
+        android:ems="10"
+        android:hint="@string/age"
+        android:inputType="number"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last_name" />
+
+      <!--it displays phone number field-->
+      <EditText
+        android:id="@+id/edt_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/black"
+        android:ems="10"
+        android:hint="@string/phone"
+        android:inputType="phone"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_age" />
+
+      <!--it displays date field-->
+      <EditText
+        android:id="@+id/edt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/black"
+        android:ems="10"
+        android:hint="MM/DD/YYYY"
+        android:inputType="date"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
+
+      <!--it displays two radio button-->
+      <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chk_status">
+
+        <RadioButton
+          android:id="@+id/rad_std_room"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Standard Room"
+          android:textSize="18sp" />
+
+        <RadioButton
+          android:id="@+id/rad_dlx_room"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Deluxe Room"
+          android:textSize="18sp" />
+
+      </RadioGroup>
+
+      <!--it displays a dropdown with 4 items-->
+      <Spinner
+        android:id="@+id/spn_guests"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="40dp"
+        android:paddingBottom="10dp"
+        android:ems="10"
+        android:entries="@array/guests"
+        android:inputType="none"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_date" />
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--Search button to display query-->
+        <Button
+          android:id="@+id/search_btn"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="@string/search"
+          android:layout_margin="5dp"
+          android:onClick="searchRecord"
+          android:textColor="@color/black"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/edit_search" />
+
+        <!--Search box to search data by first and last name-->
+        <EditText
+          android:id="@+id/edit_search"
+          android:layout_width="0dp"
+          android:layout_margin="5dp"
+          android:hint="First and Last Name"
+          android:layout_height="wrap_content"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/search_btn"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </ScrollView>

@@ -1,0 +1,18 @@
+<!--Umar Khan
+    IT-372
+    Final Project -->
+<resources>
+    <string name="app_name">Hotel Reservation</string>
+    <string-array name="guests">
+        <item><b>1-guest</b></item>
+        <item><b>2-guests</b></item>
+        <item><b>3-guests</b></item>
+        <item><b>4-guests</b></item>
+    </string-array>
+    <string name="reset_caption">Reset</string>
+  <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="age">Age</string>
+    <string name="phone">Phone</string>
+  <string name="search">Search</string>
+</resources>
